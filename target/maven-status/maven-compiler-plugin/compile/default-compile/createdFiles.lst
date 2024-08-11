@@ -1,0 +1,7 @@
+nlmk/task/service/InputData.class
+nlmk/task/service/DeltaService.class
+nlmk/task/service/ExtractData.class
+nlmk/task/model/ProductState.class
+nlmk/task/exeception/NotValidDataException.class
+nlmk/task/TrendAssessment.class
+nlmk/task/service/DataValidationService.class
