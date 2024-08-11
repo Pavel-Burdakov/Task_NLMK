@@ -1,7 +1,6 @@
 /Users/reverse/IdeaProjects/Task_NLMK/src/main/java/nlmk/task/exeception/NotValidDataException.java
 /Users/reverse/IdeaProjects/Task_NLMK/src/main/java/nlmk/task/TrendAssessment.java
 /Users/reverse/IdeaProjects/Task_NLMK/src/main/java/nlmk/task/model/ProductState.java
-/Users/reverse/IdeaProjects/Task_NLMK/src/main/java/nlmk/task/service/InputData.java
 /Users/reverse/IdeaProjects/Task_NLMK/src/main/java/nlmk/task/service/DataValidationService.java
 /Users/reverse/IdeaProjects/Task_NLMK/src/main/java/nlmk/task/service/DeltaService.java
 /Users/reverse/IdeaProjects/Task_NLMK/src/main/java/nlmk/task/service/ExtractData.java

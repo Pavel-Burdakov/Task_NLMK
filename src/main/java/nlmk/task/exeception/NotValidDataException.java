@@ -4,6 +4,6 @@ package nlmk.task.exeception;
  */
 public class NotValidDataException extends Exception {
     public NotValidDataException() {
-        super("Данные в файле не корректны");
+        super("Введенные данные некорректны");
     }
 }

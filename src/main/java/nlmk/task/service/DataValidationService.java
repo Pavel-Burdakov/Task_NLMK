@@ -7,7 +7,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 /**
- * Класс для проверки корректности документы для обработки
+ * Класс для проверки корректности данных для обработки
  */
 public class DataValidationService {
     private static final Logger logger = LoggerFactory.getLogger(DataValidationService.class);
@@ -15,13 +15,14 @@ public class DataValidationService {
     private static final String valid2 = "Ручей";
 
     /**
-     * Метода проверяет соответствие заголовка
-     * и корректность данных об уровне металла в кристаллизаторе
+     * Метода корректность переданных данных
+     * корректность данных об уровне металла в кристаллизаторе и корректность значение уровня отклонения
      *
      * @param fileName - имя документа
+     * @param delta    - значимое отклонение
      * @throws NotValidDataException исключение выбрасывается в случе если данные не корректны
      */
-    public static void dataValidation(String fileName) throws NotValidDataException {
+    public static void dataValidation(String fileName, String delta) throws NotValidDataException {
         String header[] = ExtractData.extractHeader(fileName);
         if (!header[0].contains(valid1) || !header[1].contains(valid2) || !header[2].contains(valid2)) {
             throw new NotValidDataException();
@@ -33,6 +34,12 @@ public class DataValidationService {
                 logger.error("Данные в файле не корректны");
                 throw new NotValidDataException();
             }
+        }
+        try {
+            Integer.parseInt(delta);
+        } catch (NumberFormatException e) {
+            System.out.println("неверно ввден уровень отклонения");
+            throw new NotValidDataException();
         }
     }
 }
